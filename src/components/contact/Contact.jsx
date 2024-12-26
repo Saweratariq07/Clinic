@@ -8,13 +8,22 @@ function Contact() {
 
 
   return (
-    <div>
+  
+       <div className="relative w-full h-auto overflow-hidden">
+      <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute w-full h-full object-cover"
+    src="https://videos.pexels.com/video-files/2603664/2603664-uhd_2560_1440_24fps.mp4" 
+  ></video>
        <Nav/>
    
-    <div className="bg-black min-h-screen flex items-center justify-center pt-44 py-10">
+    <div className=" min-h-screen flex items-center justify-center pt-44 py-10">
     
-      <div className="relative w-full max-w-2xl bg-gradient-to-r  from-[#e7cd22] via-[#b29f1f] to-[#373317] p-12 rounded-lg border-black">
-        <form  className="space-y-6">
+    <div className="relative w-full max-w-2xl bg-gradient-to-r from-[#2a3a5d] to-[#4b0051] text-[#ffffff] p-12 rounded-lg border-white" style={{ backgroundColor: 'rgba(42, 58, 93, 0.35)' }}>
+    <form  className="space-y-6">
           <div>
             <input
               type="text"
@@ -22,7 +31,7 @@ function Contact() {
               placeholder="Full Name"
               value= ''
              
-              className="w-full p-4 border-2 border-black bg-transparent placeholder-black focus:outline-none"
+              className="w-full p-4 border-2 border-white bg-transparent placeholder-white focus:outline-none"
             />
           </div>
 
@@ -33,7 +42,7 @@ function Contact() {
                 name="email"
                 placeholder="E Mail"
                
-                className="w-full p-4 border-2 border-black bg-transparent placeholder-black focus:outline-none"
+                className="w-full p-4 border-2 border-white bg-transparent placeholder-white focus:outline-none"
               />
             </div>
 
@@ -43,7 +52,7 @@ function Contact() {
                 name="phone"
                 placeholder="Phone Number"
               
-                className="w-full p-4 border-2 border-black bg-transparent placeholder-black focus:outline-none"
+                className="w-full p-4 border-2 border-white bg-transparent placeholder-white focus:outline-none"
               />
             </div>
           </div>
@@ -51,7 +60,7 @@ function Contact() {
           <div>
             <select
               name="service"
-              className="w-full p-4 border-2 border-black bg-transparent text-black focus:outline-none"
+              className="w-full p-4 border-2 border-white bg-transparent text-white focus:outline-none"
             >
               <option value="">Select Service</option>
               <option value="Service 1">Medical</option>
@@ -63,7 +72,7 @@ function Contact() {
             <input
               type="date"
               name="date"
-              className="w-full p-4 border-2 border-black bg-transparent placeholder-black focus:outline-none"
+              className="w-full p-4 border-2 border-white bg-transparent placeholder-white focus:outline-none"
             />
           </div>
 
@@ -71,15 +80,15 @@ function Contact() {
             <textarea
               name="message"
               placeholder="Additional Note"
-              className="w-full h-32 p-4 border-2 border-black bg-transparent placeholder-black focus:outline-none"
+              className="w-full h-32 p-4 border-2 border-white bg-transparent placeholder-white focus:outline-none"
             />
           </div>
 
-          <div className="flex items-start text-black justify-between">
+          <div className="flex items-start text-white justify-between">
             <input
               type="checkbox"
               name="acceptedTerms"
-              className="mr-2 bg-black"
+              className="mr-2 bg-white"
               required
             />
             <p className="text-sm">
@@ -88,7 +97,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="w-full bg-black text-yellow-400 font-semibold py-3 rounded-md hover:bg-yellow-600 transition duration-200"
+            className="w-full bg-white text-yellow-400 font-semibold py-3 rounded-md hover:bg-yellow-600 transition duration-200"
           >
             Confirm
           </button>

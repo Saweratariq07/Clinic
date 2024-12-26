@@ -42,11 +42,14 @@ const Doctor = () => {
   return (
     <div>
       <div className="relative  w-full h-auto overflow-hidden">
-  <img
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
     className="absolute w-full h-full object-cover"
-    src="bg.jpg"
-    alt="Background"
-  />
+    src="https://videos.pexels.com/video-files/2603664/2603664-uhd_2560_1440_24fps.mp4" 
+  ></video>
   {/* Color Overlay */}
   <div className="absolute inset-0 bg-black opacity-50"></div>
 

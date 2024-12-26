@@ -57,20 +57,28 @@ const Doctors = () => {
   };
 
   return (
-    <div className=" py-10">
+       <div className="relative w-full h-auto overflow-hidden">
+      <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute w-full h-full object-cover"
+    src="https://videos.pexels.com/video-files/2603664/2603664-uhd_2560_1440_24fps.mp4" 
+  ></video>
       <Nav/>
-      <div className='bg-gradient-to-r  pt-44 from-black via-black to-[#373317] bg-clip-text text-transparent'>
+      <div className='relative pt-44'>
       <div className="text-center mb-5">
-        <h1 className="text-3xl font-bold">
-          <span className="bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent">❋</span> FAQs{" "}
-          <span className="bg-gradient-to-r from-black via-black to-black bg-clip-text text-transparent">❋</span>
+        <h1 className="text-3xl font-bold text-purple-900">
+          <span className="">❋</span> FAQs{" "}
+          <span className="">❋</span>
         </h1>
       </div>
       <div className="max-w-3xl mx-auto space-y-2">
         {faqs.map((faq, index) => (
           <div key={index}>
             <div
-              className="border border-black p-4 text-lg font-semibold hover:bg-gradient-to-r from-black via-black to-black hover:text-white transition duration-300 cursor-pointer"
+              className="border border-purple-900 p-4 text-lg font-semibold hover:bg-gradient-to-r from-purple-900 via-purple-900 to-purple-900 hover:text-white transition duration-300 cursor-pointer"
               onClick={() => toggleFaq(index)}
             >
           <div className="flex justify-between">
@@ -86,7 +94,7 @@ const Doctors = () => {
             </div>   
             </div>
             {selectedFaqIndex === index && (
-              <div className="bg-gradient-to-r from-black via-black to-black text-white p-4 mt-1 border-l-4 border-black">
+              <div className="bg-gradient-to-r from-purple-900 via-purple-900 to-purple-900 text-white p-4 mt-1 border-l-4 border-purple-900">
                 {faq.answer}
               </div>
             )}

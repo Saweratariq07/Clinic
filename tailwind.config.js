@@ -13,4 +13,5 @@ padding:'24px'
     extend: {},
   },
   plugins: [],
-}
+};
+
