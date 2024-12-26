@@ -1,0 +1,108 @@
+/* Navbar styling */
+.nav-item {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #010124;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-item:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* For desktop view */
+  .navbar-transparent {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+  }
+  
+  /* Marquee */
+  .marquee-container {
+    background-color: #007f3b;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .marquee {
+    display: inline-block;
+    padding: 6px 0;
+    animation: marquee 15s linear infinite;
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive styling */
+  
+  /* Smaller screens, like tablets and phones */
+  @media (max-width: 768px) {
+    .navbar-transparent {
+      position: relative;
+      background-color: #00447a; /* Make navbar visible */
+      padding: 10px;
+    }
+  
+    .nav-item {
+      padding: 8px 5px;
+    }
+  
+    .nav-item::after {
+      height: 1px;
+    }
+  
+    .marquee {
+      font-size: 1rem;
+    }
+  
+    #mobile-menu {
+      background-color: #00447a;
+    }
+  
+    .nav-item:hover {
+      background-color: #005f99;
+    }
+  }
+  
+  /* Extra small devices (phones, 576px and below) */
+  @media (max-width: 576px) {
+    .marquee {
+      font-size: 0.875rem;
+    }
+  
+    .navbar-transparent {
+      padding: 8px 15px;
+    }
+  
+    .nav-item {
+      font-size: 0.875rem;
+    }
+  
+    #mobile-menu {
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  

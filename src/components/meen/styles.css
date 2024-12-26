@@ -1,0 +1,75 @@
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 950px;
+    }
+  }
+  
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: hsl(0, 0%, 80%);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  
+  /* .home-pic{
+    background-image: url(/public/home.jpeg);
+    background-size: cover;
+  } */
+  .animate-typewriter {
+    
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms infinite;
+    width: 950px; 
+    font-family: 'Arbel',sans-serif; 
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-around; /* or space-between */
+  }
+  
+  .col-md-6 {
+    padding: 0 15px; /* Adjust padding for spacing */
+  }
+  
+  /* styles.css */
+h1 {
+  line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Optional: Adjust for even smaller screens */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem; /* Smaller font size for very small screens */
+  }
+}
+
+  
+
+@keyframes pulse {
+  0% {
+    background-color: #e7cd22;
+    box-shadow: 0 0 0 rgba(231, 205, 34, 0);
+  }
+
+  50% {
+    background-color: #f9e29a;
+    box-shadow: 0 0 20px rgba(231, 205, 34, 1), 0 0 40px rgba(231, 205, 34, 1);
+  }
+
+  100% {
+    background-color: #e7cd22;
+    box-shadow: 0 0 0 rgba(231, 205, 34, 0);
+  }
+}
+
+.animate-button {
+  animation: pulse 2s infinite;
+}
