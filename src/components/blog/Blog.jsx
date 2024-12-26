@@ -3,9 +3,17 @@ import Nav from '../home/Nav'
 
 function Blog() {
   return (
-    <div className='bg-black'>
+       <div className="relative w-full h-auto overflow-hidden">
+      <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute w-full h-full object-cover"
+    src="https://videos.pexels.com/video-files/2603664/2603664-uhd_2560_1440_24fps.mp4" 
+  ></video>
       <Nav/>
-      <main className='pt-44 text-[#facc15]'>
+      <main className='pt-44 relative text-purple-900'>
         <h1 className='container text-xl space-x-8 mx-12'>Join the team at <span className='font-bold'>Surgi Home Limited</span>  and be a part of our mission to revolutionize healthcare through innovative digital solutions. We are always looking for passionate, talented, and driven individuals to help us shape the future of surgical specialties.</h1>
     <h1 className='text-3xl font-bold mt-8'>Why Work with Surgi Home?    </h1>
     <div className=' text-center justify-center align-middle'>
